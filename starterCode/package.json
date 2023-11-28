@@ -4,7 +4,11 @@
   "description": "lunch and learn - Jest",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "node dist/server.js",
+    "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
+    "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx",
+    "build": "npx tsc"
   },
   "repository": {
     "type": "git",
