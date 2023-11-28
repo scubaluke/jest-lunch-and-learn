@@ -4,9 +4,10 @@
   "description": "lunch and learn - Jest",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node src/index.ts",
+    "start": "nodemon ts-node src/index.ts",
     "build": "tsc",
-    "serve": "node dist/index.js"
+    "serve": "node dist/index.js",
+    "nodemon": "nodemon src/index.js"
   },
   "repository": {
     "type": "git",
