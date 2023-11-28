@@ -1,10 +1,10 @@
 import express, { Request, Response } from 'express'
 
 const app = express()
-const port = 3000
+const port = 5050
 
 app.get('/', (req: Request, res: Response) => {
-  res.send('Hello, this is Express + TypeScript')
+  res.send('hi, this is Express + TypeScript')
 })
 
 app.listen(port, () => {
