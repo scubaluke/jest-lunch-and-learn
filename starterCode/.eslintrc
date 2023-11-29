@@ -1,0 +1,25 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "rules": {
+    "@typescript-eslint/semi": ["error","never"],
+    "jest/valid-expect": 0,
+    "jest/no-disabled-tests": 0,
+    "no-global-assign": ["error", { "exceptions": ["Error"] }],
+    "no-else-return": "error",
+    "no-console": "warn",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error"],
+    "no-var": "error",
+    "complexity": ["error", { "max": 20 }]
+  }
+}

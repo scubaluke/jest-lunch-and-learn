@@ -14,7 +14,7 @@ JEST:
 - test patterns
 - your first test (2 = 2)
 - basic unit test (test one function)
-- hooks - beforEach, afterAll etc.
+- hooks - beforeEach, afterAll etc.
 - setting up and using mocking.
 - testing an api
 - testing for errors
