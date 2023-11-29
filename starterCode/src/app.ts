@@ -1,17 +1,11 @@
-import express, { Request, Response } from 'express'
-import { add } from './helpers/add'
+import express from 'express'
+
+import routes from './routes'
+import { errorHandler } from './helpers/errorHandler'
 
 const app = express()
 
-app.get('/', (req: Request, res: Response) => {
-  res.status(200).json({ message: 'hi, this is Express + TypeScript' })
-})
+app.use(routes)
 
-app.get('/add', (req: Request, res: Response) => {
-  const numbers = String(req.query.numbers)
-  const numbersArray = numbers.split(',').map((number) => Number(number.trim()))
-  const sum = add(numbersArray)
-  res.status(200).json({ sum })
-})
-
+app.use(errorHandler)
 export default app
