@@ -18,8 +18,11 @@
     "no-else-return": "error",
     "no-console": "warn",
     "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": ["error"],
     "no-var": "error",
-    "complexity": ["error", { "max": 20 }]
+    "complexity": ["error", { "max": 20 }],
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      { "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" },
+    ],
   }
 }
