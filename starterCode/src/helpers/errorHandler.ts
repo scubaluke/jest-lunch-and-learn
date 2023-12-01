@@ -1,4 +1,5 @@
 import { Request, Response, NextFunction } from 'express'
+import { StatusCodes } from 'http-status-codes'
 
 interface ResponseBody {
   message: string
@@ -15,7 +16,11 @@ export function errorHandler(
   res: Response,
   _next: NextFunction,
 ) {
-  const { status, message, method } = errorResponse
+  const {
+    status = StatusCodes.SERVICE_UNAVAILABLE,
+    message,
+    method,
+  } = errorResponse
   const responseBody: ResponseBody = { message }
   if (method) {
     responseBody.method = method
