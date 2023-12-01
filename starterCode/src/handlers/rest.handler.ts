@@ -17,7 +17,6 @@ export class RestHandler {
         message: 'Please try again later',
       }
       next(responseBody)
-      next(error)
     }
   }
 
