@@ -1,7 +1,7 @@
 import { RestHandler } from '../handlers/rest.handler'
 import { Router } from 'express'
 
-import { allowGetOnly } from '../helpers/validateMethods'
+import { allowGetOnly } from '../middleware/validateMethods'
 import {
   validate,
   validateDateFormat,
