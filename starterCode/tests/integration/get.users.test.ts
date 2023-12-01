@@ -21,7 +21,7 @@ const route = '/users'
 describe('happy path tests - /users', () => {
   it('/users should work as expected with no query param', async () => {
     //@ts-ignore
-    mockUsers.mockResolvedValue(usersData)
+    mockUsers.mockResolvedValue([usersData[0].dataValues])
     const response = await supertest(app).get(route)
 
     expect(response.status).toEqual(StatusCodes.OK)
