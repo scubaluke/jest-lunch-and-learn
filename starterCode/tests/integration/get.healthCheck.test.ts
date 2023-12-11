@@ -6,13 +6,13 @@ import app from '../../src/app'
 /*
 Moving on to integration tests. 
 remember - unit test test one "unit" of code. Think one function.
-integration tests are going to test that these work together.
+integration tests are going to test that these functions work together.
 
-we want to test that our app runs as expected and responds as we expect. 
+We want to test that our app runs as expected and responds as we expect. 
 
-for this integration test, we will need to use the NPM package "supertest"
+For this integration test, we will need to use the NPM package "supertest"
 the way it works is you call super test, passing in your app. (note your server logic needs to be separated out from your app for this to work properly.)
-then you call the method (get - in the case) passing in the route. 
+Then you call the method (get - in the case) passing in the route. 
 NOTE: this action is asynchronous, so we must mark the jest callback function as async and be sure to await the response. 
 we will assign the response to a variable - to properly test what we are expecting the response to be. 
 */

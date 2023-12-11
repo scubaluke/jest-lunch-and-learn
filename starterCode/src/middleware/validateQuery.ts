@@ -34,11 +34,14 @@ export function validateNumericArray(): ValidationChain[] {
   return [
     query('numbers')
       .notEmpty()
-      .custom((numbers: string) => {
-        const numbersArray = numbers
-          .split(',')
-          .map((number) => Number(number.trim()))
-        return numbersArray.every((number) => !isNaN(number))
+      .custom((numbers: string | undefined) => {
+        if (numbers) {
+          const numbersArray = numbers
+            .split(',')
+            .map((number) => Number(number.trim()))
+          return numbersArray.every((number) => !isNaN(number))
+        }
+        return true
       }),
   ]
 }
