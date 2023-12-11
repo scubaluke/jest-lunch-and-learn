@@ -11,8 +11,6 @@ the description should read to include the "it"
 The first and most simple test we can write is something like we expect 1 to equal 1
 */
 
-import { add } from '../../src/helpers/add'
-
 it('Should have one passing test', () => {
   expect(1).toEqual(1)
 })
@@ -21,6 +19,7 @@ it('Should have one passing test', () => {
 we can now start testing our functions (unit tests)
 by importing them into our test file, calling them and testing the results are what we expected.
 */
+import { add } from '../../src/helpers/add'
 
 it('Should have one passing test', () => {
   const numbers = [1, 2, 3]
