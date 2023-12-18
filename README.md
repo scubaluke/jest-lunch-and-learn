@@ -43,3 +43,15 @@ Move through the test files starting with:
   - get.healthCheck.test.ts
   - get.add.test.ts
   - get.users.test.ts
+
+## how to run the app.
+
+- After pulling the repository cd into `starterCode`
+- run `npm i` in your terminal from the `starterCode` directory
+  - This will install the necessary dependencies.
+- run `npm run dev` from the `starterCode` directory to run the app.
+- run `npm run test` from the `starterCode` directory to run all of the tests.
+
+### recommended VS Code extensions
+
+- Jest (this will allow you to run one test at a time)
